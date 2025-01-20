@@ -11,7 +11,16 @@ The main objectives of this project are:
 The FLATTENED_MEDICAL_RECORDS table is located within the MISTRALHEALTHDB.MEDICALRECORDDATAMART schema in Snowflake and contains detailed patient data, illnesses, and associated metadata.
 
 
-## Architecture
+## Project Architecture
+The project is broken down into two major sections, Medical data is entered into the Snowflake database via a dedicated application. This system allows medical personnel to perform CRUD operations (Create, Read, Update, and Delete) by efficiently receiving and managing patient information.
+
+The Mistral AI model is integrated with the Snowflake database to provide actionable insights from the data. This integration supports informed decision-making within the organization. It provides medical professionals with the ability to interact with the database and get needed information.
+
+## Producer Script
+The producer sends data to Snowflake Data Warehouse where the Mistral Model will build a RAG model upon.
+👉🏾 Producers
+
+
 ### 3.1. Mistral API and Groq Integration
 The heart of this project is powered by the Mistral API via Groq API. The Groq API version of Mistral was selected due to its superior execution speed, which is essential for processing large datasets like the medical records efficiently.
 
