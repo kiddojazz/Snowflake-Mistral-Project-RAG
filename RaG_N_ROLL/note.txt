@@ -1,0 +1,5 @@
+create database Mistralhealthdb
+
+create schema MISTRALHEALTHDB.medicalrecorddatamart
+
+select top 100 * from MISTRALHEALTHDB.MEDICALRECORDDATAMART.MEDICAL_RECORDS
