@@ -16,9 +16,11 @@ The project is broken down into two major sections, Medical data is entered into
 
 The Mistral AI model is integrated with the Snowflake database to provide actionable insights from the data. This integration supports informed decision-making within the organization. It provides medical professionals with the ability to interact with the database and get needed information.
 
+![Architecture](https://github.com/kiddojazz/Snowflake-Mistral-Project-RAG/blob/main/Images/Eagle_Medicals.png)
+
 ## Producer Script
-The producer sends data to Snowflake Data Warehouse where the Mistral Model will build a RAG model upon.
-👉🏾 Producers
+The producer sends data to Snowflake Data Warehouse where the Mistral Model will build an RAG model.
+👉🏾 [Producers](https://github.com/kiddojazz/Snowflake-Mistral-Project-RAG/blob/main/RaG_N_ROLL/producer.py)
 
 
 ### 3.1. Mistral API Integration
@@ -40,13 +42,13 @@ To make the documentation more digestible, the project has been broken down into
 Each section below outlines the modules and their roles in the project.
 
 ## Modules Overview
-### 7.1. Generic Modules:
+### Generic Modules:
 Pages_markdowns.py:
 This module defines the markdown pages used for each page in the Streamlit application. It provides a structure for presenting content in markdown format within the web interface.
 
 
 
-### 7.2. Chatbot Modules:
+### Chatbot Modules:
 
 **Mistral_chat.py:** 
 
@@ -65,21 +67,26 @@ Currently, this module contains a function for querying the Snowflake DB. It ser
 
 
 
-### 7.3. Chat Conversation Module
+### Chat Conversation Module
 Chat_conversation.py: 
 This module orchestrates the Streamlit chat interface, which is the core interaction point for answering questions about the patient data in the FLATTENED_MEDICAL_RECORDS table. It provides two classes for different modes of operation within the chat interface:
 •	ChatInterface: This class represents the main chat interface, where users send queries or prompts. It returns a DataFrame based on the prompt, providing the relevant data extracted from the Snowflake table.
 •	SideChatInterface: This class manages the side chat functionality within the same page. After a DataFrame is generated from the ChatInterface, users can interact further with the chatbot through the side chat. This mode allows for follow-up conversations or deeper exploration of the data that was previously retrieved.
 
+![Chat Module](https://github.com/kiddojazz/Snowflake-Mistral-Project-RAG/blob/main/Images/1.png)
+
  
 Figure 1: Full View
 
-
+![Table](https://github.com/kiddojazz/Snowflake-Mistral-Project-RAG/blob/main/Images/2.png)
  
 Figure 2: Main Chat
- 
+
+ ![Side Chat](https://github.com/kiddojazz/Snowflake-Mistral-Project-RAG/blob/main/Images/3.png)
 Figure 3: Side Chat
-7.4. Dashboard Module
+
+### Dashboard Module
+![Dashboard](https://github.com/kiddojazz/Snowflake-Mistral-Project-RAG/blob/main/Images/4.png)
  
 ### Pages_utilities.streamlit_plots.py
 This module contains all the possible plotting functions that could be implemented on the Streamlit Dashboard page. It provides various charting utilities, each designed to work with different data types and visualization needs. These functions can generate a wide range of visualizations, including but not limited to bar charts, line charts, pie charts, and histograms.
