@@ -21,7 +21,7 @@ The producer sends data to Snowflake Data Warehouse where the Mistral Model will
 👉🏾 Producers
 
 
-### 3.1. Mistral API and Groq Integration
+### 3.1. Mistral API Integration
 The heart of this project is powered by the Mistral API via Groq API. The Groq API version of Mistral was selected due to its superior execution speed, which is essential for processing large datasets like the medical records efficiently.
 
 ### 3.2. Snowflake Data Storage
